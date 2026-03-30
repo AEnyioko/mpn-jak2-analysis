@@ -1,0 +1,9 @@
+# environment.yml
+name: jak2
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - scanpy
+  
