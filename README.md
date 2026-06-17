@@ -51,7 +51,7 @@ bash
 
 ```bash
 git clone https://github.com/cenyioko/mpn-jak2-analysis.git
-cd mpn-jak2-comutation
+cd mpn-jak2-analysis
 ```
 
 ### 2. Set up environments
@@ -83,7 +83,7 @@ snakemake --configfile config/local.yaml --cores 4
 ---
 ## Repository Structure
 ```
-mpn-jak2-comutation/
+mpn-jak2-analysis/
 │
 ├── config/
 │   ├── local.yaml              # Local desktop paths and thresholds
