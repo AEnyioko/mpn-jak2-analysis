@@ -1,10 +1,14 @@
-rule acquire_datasets:
+configfile: "config/local.yaml"
+
+rule all:
     input:
-        config/local.yaml
-        datasets: config/local.yaml
-        dataset=expand("{dataset}", dataset=config["datasets"])
+        expand("data/processed/{dataset}.h5ad", dataset=config["datasets"])
+
+rule acquire_datasets:
     output:
         "data/raw/{dataset}.h5ad"
+    conda:
+        "envs/environment.yml"
     script:
         "scripts/acquire.py"
 
@@ -13,5 +17,7 @@ rule preprocess_datasets:
         "data/raw/{dataset}.h5ad"
     output:
         "data/processed/{dataset}.h5ad"
+    conda: 
+        "envs/environment.yml"
     script:
         "scripts/preprocess.py"
