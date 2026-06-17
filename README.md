@@ -79,9 +79,51 @@ snakemake --configfile config/local.yaml --cores 4
 ```
 
 ---
-
-
-
+## Repository Structure
+```
+mpn-jak2-comutation/
+│
+├── config/
+│   ├── local.yaml              # Local desktop paths and thresholds
+│   
+│
+├── profiles/
+│   └── slurm/                  # Snakemake SLURM cluster profile
+│
+├── rules/
+│   ├── acquire.smk             # Data download from GEO/EGA
+│   ├── qc.smk                  # QC, doublet removal, preflight check
+│   ├── aim1.smk                # scVI integration, annotation, DE, cNMF
+│   └── aim2.smk                # Pseudotime, RNA velocity, DNMT3A covariate
+│
+├── scripts/
+│   ├── acquire.py              # GEO/EGA download logic
+│   ├── qc.py                   # Scanpy QC + Scrublet
+│   ├── preflight_check.py      # Cell count validation per genotype group
+│   ├── integrate.py            # scVI batch correction
+│   ├── annotate.py             # CellTypist cell type annotation
+│   ├── de_analysis.py          # pyDESeq2 + MAST + cNMF
+│   ├── pseudotime.py           # Diffusion pseudotime
+│   ├── rna_velocity.py         # scVelo RNA velocity
+│   ├── dnmt3a_covariate.py     # DNMT3A covariate model
+│   └── report.py               # Quarto report generation
+│
+├── envs/
+│   ├── environment.yml         # Python conda environment (pinned)
+│   ├── environment.lock        # Full resolved dependency tree
+│   └── r_environment.yml       # R conda environment for MAST
+│
+├── results/
+│   ├── aim1/                   # Harmonized .h5ad + DE outputs
+│   ├── aim2/                   # Trajectory outputs + figures
+│   └── report/                 # HTML report (mpn_analysis_report.html)
+│
+├── Snakefile                   # Master workflow (imports all rules/)
+├── .env                        # EGA credentials — gitignored
+├── .gitignore
+└── README.md
+```
+---
 ## References
 
 Bader, M. S., & Meyer, S. C. (2022). JAK2 in myeloproliferative neoplasms: Still a protagonist.  *Pharmaceuticals, 15* (2), 160.
