@@ -1,9 +1,13 @@
 # environment.yml
-name: jak2
+name: mpn
 channels:
   - conda-forge
+  - bioconda
 dependencies:
-  - python
-  - numpy
   - scanpy
-  
+  - scrublet
+  - scVI-tools
+  - celltypist
+  - pydeseq2
+  - cnmf
+  - scvelo
