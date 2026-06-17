@@ -24,7 +24,7 @@ This project uses publicly available single-cell RNA-seq datasets to characteriz
 JAK2 V617F co-occurring with TET2, DNMT3A, or ASXL1 produces distinct differentiation trajectories compared to JAK2 V617F alone, such that each co-mutation specifically biases progenitor cells toward distinct endpoints consistent with the observed MPN phenotype:
 
 * **JAK2+TET2:** progenitor expansion with delayed commitment at the myeloid-erythroid progenitor (MEP) bifurcation point (Rasmussen et al., 2019; Psaila et al., 2020)
-* **JAK2+ASXL1: **myeloid-skewed trajectory consistent with PMF, via disruption of Polycomb repressive complex 2 (Bader & Meyer, 2022)
+* **JAK2+ASXL1:** myeloid-skewed trajectory consistent with PMF, via disruption of Polycomb repressive complex 2 (Bader & Meyer, 2022)
 * **DNMT3A:** treated as a covariate modifier, not a standalone contrast group, following Challen et al. (2012)
 
 ---
