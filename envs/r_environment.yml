@@ -1,0 +1,4 @@
+# r environment
+install.packages("renv")
+renv::init()
+BiocManager::install("MAST")
