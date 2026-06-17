@@ -3,6 +3,8 @@
 
 **Author:** Chibuzor Anthony Enyioko
 
+**Contact:** chibuzor.a.enyioko@uth.tmc.edu
+
 **Program:** MS Biomedical Informatics, UTHealth (exp. 2027)
 
 **Status:** Pre-project dataset audit in progress
