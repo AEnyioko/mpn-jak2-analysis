@@ -50,7 +50,7 @@ Using the Aim 1 harmonized dataset, infer how each co-mutation biases progenitor
 bash
 
 ```bash
-git clone https://github.com/cenyioko/mpn-jak2-comutation.git
+git clone https://github.com/cenyioko/mpn-jak2-analysis.git
 cd mpn-jak2-comutation
 ```
 
