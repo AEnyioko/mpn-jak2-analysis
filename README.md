@@ -41,6 +41,8 @@ Using the Aim 1 harmonized dataset, infer how each co-mutation biases progenitor
 
 **Output:** `results/aim2/mpn_pseudotime.h5ad` + trajectory figures + DNMT3A covariate model output.
 
+---
+
 ## Quickstart
 
 ### 1. Clone the repository
@@ -124,6 +126,24 @@ mpn-jak2-comutation/
 └── README.md
 ```
 ---
+## Data
+### Data Requirements
+|Requirement|Value|
+|-----|-----|
+|Minimum format|Raw counts only|
+|Cell count minimum|200 cells per genotype group for primary trajectory result|
+### Data Availability
+|Asset|Location|
+|-----|-----|
+|Raw public MPN datasets|GEO / EGA databases, listed in [config/local.yaml](https://github.com/AEnyioko/MPNDataset/blob/main/config/local.yaml )|
+|Processed .h5ad outputs|TBD|
+|Analysis code|[Current repository](https://github.com/AEnyioko/MPNDataset)|
+---
+## Validation Plan
+1. Held-out cohort replication: Genotype × phenotype signatures tested on an independent dataset not used in harmonization
+2. Literature benchmarking: Trajectory predictions compared against Psaila et al. (2020) MEP bifurcation findings and Rasmussen et al. (2019) TET2 enhancer data
+3. Sensitivity analysis: Pipeline rerun at two alternative values for minimum gene count threshold and doublet score threshold; genotype group cell counts verified above 200-cell minimum at each threshold
+
 ## References
 
 Bader, M. S., & Meyer, S. C. (2022). JAK2 in myeloproliferative neoplasms: Still a protagonist.  *Pharmaceuticals, 15* (2), 160.
