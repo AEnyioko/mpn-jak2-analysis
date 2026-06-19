@@ -5,6 +5,8 @@ rule all:
         expand("data/processed/{dataset}.h5ad", dataset=config["datasets"])
 
 rule acquire_datasets:
+    params:
+        dataset="{dataset}"
     output:
         "data/raw/{dataset}.h5ad"
     conda:

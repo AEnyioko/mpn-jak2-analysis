@@ -11,3 +11,4 @@ dependencies:
   - pydeseq2
   - cnmf
   - scvelo
+  - GEOparse

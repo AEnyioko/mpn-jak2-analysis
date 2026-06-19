@@ -1,4 +1,3 @@
-
 # How Co-occurring Mutations Modify the Transcriptional Consequences of JAK2 V617F in Different MPN Phenotypes
 
 **Author:** Chibuzor Anthony Enyioko
@@ -35,7 +34,7 @@ JAK2 V617F co-occurring with TET2, DNMT3A, or ASXL1 produces distinct differenti
 
 Construct a harmonized MPN single-cell reference dataset from public repositories (GEO, EGA) and define genotype-stratified transcriptional signatures.
 
-**Output:** `results/aim1/mpn_harmonized_annotated.h5ad` — the pipeline boundary file gating all Aim 2 analyses.
+**Output:** `results/aim1/mpn_harmonized_annotated.h5ad`
 
 ### Aim 2 — Co-mutation-Specific Differentiation Trajectory Inference
 
@@ -83,7 +82,9 @@ snakemake --configfile config/local.yaml --cores 4
 ```
 
 ---
+
 ## Repository Structure
+
 ```
 mpn-jak2-analysis/
 │
@@ -127,21 +128,30 @@ mpn-jak2-analysis/
 ├── .gitignore
 └── README.md
 ```
+
 ---
+
 ## Data
+
 ### Data Requirements
-|Requirement|Value|
-|-----|-----|
-|Minimum format|Raw counts only|
-|Cell count minimum|200 cells per genotype group for primary trajectory result|
+
+| Requirement        | Value                                                      |
+| ------------------ | ---------------------------------------------------------- |
+| Minimum format     | Raw counts only                                            |
+| Cell count minimum | 200 cells per genotype group for primary trajectory result |
+
 ### Data Availability
-|Asset|Location|
-|-----|-----|
-|Raw public MPN datasets|GEO / EGA databases, listed in [config/local.yaml](https://github.com/AEnyioko/MPNDataset/blob/main/config/local.yaml )|
-|Processed .h5ad outputs|TBD|
-|Analysis code|[Current repository](https://github.com/AEnyioko/MPNDataset)|
+
+| Asset                   | Location                                                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Raw public MPN datasets | GEO / EGA databases, listed in[config/local.yaml](https://github.com/AEnyioko/MPNDataset/blob/main/config/local.yaml) |
+| Processed .h5ad outputs | TBD                                                                                                                |
+| Analysis code           | [Current repository](https://github.com/AEnyioko/MPNDataset)                                                          |
+
 ---
+
 ## Validation Plan
+
 1. Held-out cohort replication: Genotype × phenotype signatures tested on an independent dataset not used in harmonization
 2. Literature benchmarking: Trajectory predictions compared against Psaila et al. (2020) MEP bifurcation findings and Rasmussen et al. (2019) TET2 enhancer data
 3. Sensitivity analysis: Pipeline rerun at two alternative values for minimum gene count threshold and doublet score threshold; genotype group cell counts verified above 200-cell minimum at each threshold
