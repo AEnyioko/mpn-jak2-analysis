@@ -12,3 +12,4 @@ dependencies:
   - cnmf
   - scvelo
   - GEOparse
+  - gzip

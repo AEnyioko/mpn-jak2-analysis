@@ -142,11 +142,11 @@ mpn-jak2-analysis/
 
 ### Data Availability
 
-| Asset                   | Location                                                                                                           |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Raw public MPN datasets | GEO / EGA databases, listed in[config/local.yaml](https://github.com/AEnyioko/MPNDataset/blob/main/config/local.yaml) |
-| Processed .h5ad outputs | TBD                                                                                                                |
-| Analysis code           | [Current repository](https://github.com/AEnyioko/MPNDataset)                                                          |
+| Asset                   | Location                                                                                                             |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Raw public MPN datasets | GEO / EGA databases, listed in [config/local.yaml](https://github.com/AEnyioko/MPNDataset/blob/main/config/local.yaml) |
+| Processed .h5ad outputs | TBD                                                                                                                  |
+| Analysis code           | [Current repository](https://github.com/AEnyioko/MPNDataset)                                                            |
 
 ---
 

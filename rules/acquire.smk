@@ -6,20 +6,23 @@ rule all:
 
 rule acquire_datasets:
     params:
-        dataset="{dataset}"
+        dataset = lambda wildcards: wildcards.dataset
+    log:
+        "logs/acquire_{dataset}.log"
     output:
-        "data/raw/{dataset}.h5ad"
+        "data/raw/{dataset}_family.soft"
     conda:
-        "envs/environment.yml"
+        "../envs/environment.yml"
     script:
-        "scripts/acquire.py"
+        "../scripts/acquire.py"
 
-rule preprocess_datasets:
-    input:
-        "data/raw/{dataset}.h5ad"
-    output:
-        "data/processed/{dataset}.h5ad"
-    conda: 
-        "envs/environment.yml"
-    script:
-        "scripts/preprocess.py"
+
+# rule preprocess_datasets:
+#     input:
+#         "data/raw/{dataset}_family.soft"
+#     output:
+#         "data/processed/{dataset}.h5ad"
+#     conda: 
+#         "envs/environment.yml"
+#     script:
+#         "scripts/preprocess.py"
